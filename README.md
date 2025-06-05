@@ -28,7 +28,6 @@
 - not yet deployed
 
 # future improvements
-- title
-- total input
-- buttons
-- result
+- home page
+- router
+- edit home page
