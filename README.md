@@ -28,6 +28,5 @@
 - not yet deployed
 
 # future improvements
-- home page
-- router
-- edit home page
+- total input 
+- 3 buttons (18,20,22)
