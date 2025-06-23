@@ -28,5 +28,4 @@
 - not yet deployed
 
 # future improvements
-- Styling
 - Making phone app
