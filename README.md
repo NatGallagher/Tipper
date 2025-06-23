@@ -28,5 +28,5 @@
 - not yet deployed
 
 # future improvements
-- total input 
-- 3 buttons (18,20,22)
+- Styling
+- Making phone app
