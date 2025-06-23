@@ -11,6 +11,7 @@ function Home() {
         const inputValue = input.current.value;
         const tipped = (inputValue * 18) / 100
         setTotal(tipped)
+        input.current.value = "";
     }
 
     function mediumTip() {
@@ -19,6 +20,7 @@ function Home() {
         const inputValue = input.current.value;
         const tipped = (inputValue * 20) / 100
         setTotal(tipped)
+        input.current.value = "";
     }
 
     function largeTip() {
@@ -27,6 +29,7 @@ function Home() {
         const inputValue = input.current.value;
         const tipped = (inputValue * 22) / 100
         setTotal(tipped)
+        input.current.value = "";
     }
 
   return (
