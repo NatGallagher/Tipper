@@ -3,14 +3,19 @@ import { useEffect, useState, useRef } from "react"
 function Home() {
 
     const [total, setTotal] = useState("");
+    const [newTotal, setNewTotal] = useState("");
     const input = useRef(null);
 
     function smallTip() {
         let msg = "smallTip";
         console.log(msg);
-        const inputValue = input.current.value;
+        const inputValue = parseFloat(input.current.value);
         const tipped = (inputValue * 18) / 100
-        setTotal(tipped)
+        const afterTip = (inputValue + tipped);
+        const roundedTip = parseFloat(tipped.toFixed(2));
+        const roundedTotal = parseFloat(afterTip.toFixed(2));
+        setTotal(roundedTip)
+        setNewTotal(roundedTotal);
         input.current.value = "";
     }
 
@@ -44,7 +49,8 @@ function Home() {
         <button onClick={largeTip}>22%</button>
       </div>
       <div>
-        {total}
+        <p>Tip: ${total}</p>
+        <p>New Total: ${newTotal}</p>
       </div>
     </div>
   );
