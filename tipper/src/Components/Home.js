@@ -22,18 +22,26 @@ function Home() {
     function mediumTip() {
         let msg = "mediumTip";
         console.log(msg); 
-        const inputValue = input.current.value;
+        const inputValue = parseFloat(input.current.value);
         const tipped = (inputValue * 20) / 100
-        setTotal(tipped)
+        const afterTip = (inputValue + tipped);
+        const roundedTip = parseFloat(tipped.toFixed(2));
+        const roundedTotal = parseFloat(afterTip.toFixed(2));
+        setTotal(roundedTip)
+        setNewTotal(roundedTotal);
         input.current.value = "";
     }
 
     function largeTip() {
         let msg = "largeTip";
         console.log(msg);
-        const inputValue = input.current.value;
+        const inputValue = parseFloat(input.current.value);
         const tipped = (inputValue * 22) / 100
-        setTotal(tipped)
+        const afterTip = (inputValue + tipped);
+        const roundedTip = parseFloat(tipped.toFixed(2));
+        const roundedTotal = parseFloat(afterTip.toFixed(2));
+        setTotal(roundedTip)
+        setNewTotal(roundedTotal);
         input.current.value = "";
     }
 
