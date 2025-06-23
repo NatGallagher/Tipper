@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import { Container, Button, Form, Card } from "react-bootstrap";
 
 function Home() {
 
@@ -46,21 +47,32 @@ function Home() {
     }
 
   return (
-    <div>
-      <header>
-        <h1>Tipper</h1>
-      </header>
-      <div>
-        <input ref={input}></input><br/>
-        <button onClick={smallTip}>18%</button>
-        <button onClick={mediumTip}>20%</button>
-        <button onClick={largeTip}>22%</button>
-      </div>
-      <div>
-        <p>Tip: ${total}</p>
-        <p>New Total: ${newTotal}</p>
-      </div>
-    </div>
+    <div className="bg-dark text-light min-vh-100 d-flex justify-content-center align-items-center">
+            <Container style={{ maxWidth: '400px' }} className="p-3">
+                <Card bg="dark" text="light" className="shadow-lg">
+                    <Card.Body>
+                    <h1 className="text-center display-4 fw-bold mb-4">💸 Tipper</h1>
+                        <Form.Group className="mb-3">
+                            <Form.Control
+                                ref={input}
+                                type="number"
+                                placeholder="Enter amount"
+                                className="bg-secondary text-light border-0"
+                            />
+                        </Form.Group>
+                        <div className="d-flex justify-content-between mb-3">
+                            <Button variant="outline-info" onClick={smallTip}>18%</Button>
+                            <Button variant="outline-warning" onClick={mediumTip}>20%</Button>
+                            <Button variant="outline-success" onClick={largeTip}>22%</Button>
+                        </div>
+                        <div className="text-center">
+                            <p className="mb-1">Tip: <strong>${total}</strong></p>
+                            <p>New Total: <strong>${newTotal}</strong></p>
+                        </div>
+                    </Card.Body>
+                </Card>
+            </Container>
+        </div>
   );
 }
 
